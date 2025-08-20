@@ -16,9 +16,8 @@ const AboutSection = () => {
             </h3>
 
             <p className="text-gray-400">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              I specialize in creating responsive, accessible, and performant
+              web applications using modern technologies.
             </p>
 
             <p className="text-gray-400">
