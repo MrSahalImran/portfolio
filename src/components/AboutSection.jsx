@@ -11,9 +11,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
-            </h3>
+            <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
 
             <p className="text-gray-400">
               I specialize in creating responsive, accessible, and performant
@@ -34,7 +32,8 @@ const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/Sahal_Imran_resume.pdf"
+                download="Sahal_Imran_resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
