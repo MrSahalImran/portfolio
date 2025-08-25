@@ -12,11 +12,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Leet Lab",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "A competitive programming platform. Integrating Judge0 for code execution.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["Judge0", "React", "Nodejs"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -28,7 +28,7 @@ const projects = [
     image: "/projects/project3.png",
     tags: ["React", "Node.js", "Stripe"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/MrSahalImran/ecom-shop",
   },
 ];
 
