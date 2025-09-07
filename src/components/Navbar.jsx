@@ -14,20 +14,45 @@ const navItems = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      const currentScrollY = window.scrollY;
+
+      // Check if we're at the top
+      if (currentScrollY < 10) {
+        setIsScrolled(false);
+        setIsVisible(true);
+      } else {
+        setIsScrolled(true);
+        // Show navbar when scrolling up, hide when scrolling down
+        if (currentScrollY < lastScrollY) {
+          setIsVisible(true); // Scrolling up
+        } else {
+          setIsVisible(false); // Scrolling down
+        }
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        "fixed w-full z-40 transition-all duration-300 ease-in-out",
+        isScrolled
+          ? "py-2 bg-background/70 backdrop-blur-lg shadow-lg border-b border-border/10"
+          : "py-5 bg-transparent",
+        // Desktop behavior: hide/show based on scroll direction
+        "md:translate-y-0 md:opacity-100 md:pointer-events-auto", // Always visible on mobile
+        isVisible
+          ? "md:translate-y-0 md:opacity-100 md:pointer-events-auto"
+          : "md:-translate-y-full md:opacity-0 md:pointer-events-none"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -66,7 +91,7 @@ const Navbar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed top-0 inset-x-0 h-screen bg-background/90 backdrop-blur-xl z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
