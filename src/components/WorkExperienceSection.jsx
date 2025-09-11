@@ -143,7 +143,7 @@ const WorkExperienceSection = () => {
                         </div>
                         <div className="bg-primary/5 border border-primary/10 rounded-lg p-4 mt-3">
                           <p className="text-sm text-muted-foreground italic">
-                            🚀 Actively contributing to cloud infrastructure and
+                            Actively contributing to cloud infrastructure and
                             DevOps initiatives. Key achievements and project
                             details will be updated as milestones are completed.
                           </p>
