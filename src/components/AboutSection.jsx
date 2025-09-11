@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, Cloud, Palette } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -59,13 +59,13 @@ const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <Cloud className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Cloud & DevOps</h4>
                   <p className="text-gray-400">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Building scalable cloud infrastructure and implementing
+                    CI/CD pipelines with modern DevOps practices.
                   </p>
                 </div>
               </div>
@@ -73,14 +73,14 @@ const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
+                  <Palette className="h-6 w-6 text-primary" />
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
                   <p className="text-gray-400">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Crafting intuitive user interfaces and seamless user
+                    experiences with modern design principles and tools.
                   </p>
                 </div>
               </div>
