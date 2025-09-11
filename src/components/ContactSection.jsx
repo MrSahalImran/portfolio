@@ -1,53 +1,69 @@
 import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "../hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+    const serviceID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+    emailjs
+      .sendForm(serviceID, templateID, form.current, publicKey)
+      .then(
+        (result) => {
+          toast({
+            title: "Message sent!",
+            description:
+              "Thank you for your message. I'll get back to you soon.",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          toast({
+            title: "Uh oh! Something went wrong",
+            description:
+              "There was a problem sending your message. Please try again.",
+            variant: "destructive",
+          });
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      setIsSubmitting(false);
-    }, 1500);
   };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary"> Touch</span>
         </h2>
-
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? Feel free to reach out.
           I'm always open to discussing new opportunities.
         </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">
-              {" "}
-              Contact Information
-            </h3>
-
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Email</h4>
+                  <h4 className="font-medium">Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:sahalimran.pro@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     sahalimran.pro@gmail.com
@@ -56,10 +72,10 @@ const ContactSection = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium">Phone</h4>
                   <a
                     href="tel:+918717026666"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -70,43 +86,43 @@ const ContactSection = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+                  <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Jammu, Jnk, India
-                  </a>
+                  <h4 className="font-medium">Location</h4>
+                  <p className="text-muted-foreground">Jammu, J&K, India</p>
                 </div>
               </div>
             </div>
-
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://linkedin.com/in/sahalimran" target="_blank">
+                <a
+                  href="https://linkedin.com/in/sahalimran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin />
                 </a>
-                <a href="https://github.com/MrSahalImran" target="_blank">
+                <a
+                  href="https://github.com/MrSahalImran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github />
                 </a>
               </div>
             </div>
           </div>
+          <div className="bg-card p-8 rounded-lg shadow-xs">
+            <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
-
-            <form className="space-y-6">
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Name
                 </label>
                 <input
@@ -114,17 +130,15 @@ const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="John Doe..."
                 />
               </div>
-
               <div>
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Email
                 </label>
                 <input
@@ -132,28 +146,26 @@ const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
                 />
               </div>
-
               <div>
                 <label
                   htmlFor="message"
                   className="block text-sm font-medium mb-2"
                 >
-                  {" "}
                   Your Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
+                  rows={4}
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
