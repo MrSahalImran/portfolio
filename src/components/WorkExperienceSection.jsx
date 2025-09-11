@@ -9,11 +9,7 @@ const workExperience = [
     location: "Remote",
     description:
       "Engaged in cloud-native development projects focusing on scalability and secure deployment.",
-    achievements: [
-      "Engineered a Personal Cloud Storage System with distributed architecture",
-      "Deployed containerized web apps on AWS EC2 using Docker and CI/CD pipelines",
-      "Built a cloud-based file converter and executed multi-region deployments with load balancing",
-    ],
+    achievements: ["ongoing"],
     isRecent: true,
   },
   {
@@ -132,22 +128,49 @@ const WorkExperienceSection = () => {
                     {job.description}
                   </p>
 
-                  {/* Achievements */}
+                  {/* Achievements or Current Responsibilities */}
                   <div className="space-y-2">
-                    <h5 className="font-medium text-sm uppercase tracking-wide text-primary">
-                      Key Achievements
-                    </h5>
-                    <ul className="space-y-2">
-                      {job.achievements.map((achievement, achievementIndex) => (
-                        <li
-                          key={achievementIndex}
-                          className="flex items-start gap-2 text-sm text-gray-500"
-                        >
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          <span className="leading-relaxed">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {job.achievements.includes("ongoing") ? (
+                      <>
+                        <h5 className="font-medium text-sm uppercase tracking-wide text-primary">
+                          Current Responsibilities
+                        </h5>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                          <span className="font-medium text-green-600">
+                            Currently working on exciting projects...
+                          </span>
+                        </div>
+                        <div className="bg-primary/5 border border-primary/10 rounded-lg p-4 mt-3">
+                          <p className="text-sm text-muted-foreground italic">
+                            🚀 Actively contributing to cloud infrastructure and
+                            DevOps initiatives. Key achievements and project
+                            details will be updated as milestones are completed.
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <h5 className="font-medium text-sm uppercase tracking-wide text-primary">
+                          Key Achievements
+                        </h5>
+                        <ul className="space-y-2">
+                          {job.achievements.map(
+                            (achievement, achievementIndex) => (
+                              <li
+                                key={achievementIndex}
+                                className="flex items-start gap-2 text-sm text-muted-foreground"
+                              >
+                                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                                <span className="leading-relaxed">
+                                  {achievement}
+                                </span>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
