@@ -3,33 +3,49 @@ import { Briefcase, MapPin, Calendar, ExternalLink } from "lucide-react";
 const workExperience = [
   {
     id: 1,
+    company: "CloudKeeper",
+    position: "DevOps Trainee",
+    duration: "Jan 2026 - Present",
+    location: "Noida (On Premise)",
+    description:
+      "Engaged in cloud-native development focusing on scalability ands secure deployment.",
+    achievements: ["ongoing"],
+    isRecent: true,
+  },
+
+  {
+    id: 2,
     company: "InstaDigii.com",
-    position: "React Native Developer (Contract)",
+    position: "React Native Developer",
     duration: "Sep 2025 – Jan 2026",
     location: "Remote (Norway based company)",
     description:
-      "Worked as a contract-based developer building cross-platform mobile applications and backend integrations for client projects.",
+      "Worked as a developer building cross-platform mobile applications and backend integrations for client projects.",
     achievements: [
       "Developed cross-platform mobile applications using React Native with responsive UI and optimized performance",
       "Designed and implemented complete UI/UX independently for client applications",
       "Built and integrated backend APIs to support application functionality",
       "Implemented state management and efficient data synchronization between mobile apps and backend services",
     ],
-    isRecent: false,
+    isRecent: true,
   },
   {
-    id: 2,
+    id: 3,
     company: "Naman Digital Pvt. Ltd.",
     position: "Cloud & DevOps Intern",
     duration: "Sep 2025 – Oct 2025",
     location: "Remote",
     description:
-      "Engaged in cloud-native development projects focusing on scalability and secure deployment.",
-    achievements: ["ongoing"],
-    isRecent: true,
+      "Worked on cloud-native projects focusing on scalability, containerization, and secure deployments.",
+    achievements: [
+      "Engineered a distributed personal cloud storage system using modern cloud architecture",
+      "Deployed Docker containerized applications on AWS EC2 with automated CI/CD pipelines",
+      "Built a cloud-based file conversion service and implemented multi-region deployment with load balancing",
+    ],
+    isRecent: false,
   },
   {
-    id: 3,
+    id: 4,
     company: "SaiKet Systems",
     position: "Web Development Intern",
     duration: "Aug 2025 – Sep 2025",
@@ -41,10 +57,10 @@ const workExperience = [
       "Contributed to full-stack feature implementation, ensuring scalability and performance",
       "Delivered production-ready solutions within strict timelines, collaborated effectively with team members",
     ],
-    isRecent: true,
+    isRecent: false,
   },
   {
-    id: 4,
+    id: 5,
     company: "Naman Digital Pvt. Ltd.",
     position: "Web Development Intern",
     duration: "Jul 2025 – Sep 2025",
@@ -56,10 +72,10 @@ const workExperience = [
       "Developed a full-stack e-commerce application in Node.js with payment integration and admin panel",
       "Applied clean architecture principles and collaborated to deliver production-grade features",
     ],
-    isRecent: true,
+    isRecent: false,
   },
   {
-    id: 5,
+    id: 6,
     company: "FIL Industries Pvt. Ltd.",
     position: "Business Analytics Intern",
     duration: "May 2023 – Jul 2023",
