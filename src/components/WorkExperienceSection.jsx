@@ -6,7 +6,7 @@ const workExperience = [
     company: "InstaDigii.com",
     position: "React Native Developer (Contract)",
     duration: "Sep 2025 – Jan 2026",
-    location: "Remote",
+    location: "Remote (Norway based company)",
     description:
       "Worked as a contract-based developer building cross-platform mobile applications and backend integrations for client projects.",
     achievements: [
