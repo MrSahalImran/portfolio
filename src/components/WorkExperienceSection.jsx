@@ -3,6 +3,22 @@ import { Briefcase, MapPin, Calendar, ExternalLink } from "lucide-react";
 const workExperience = [
   {
     id: 1,
+    company: "InstaDigii.com",
+    position: "React Native Developer (Contract)",
+    duration: "Sep 2025 – Jan 2026",
+    location: "Remote",
+    description:
+      "Worked as a contract-based developer building cross-platform mobile applications and backend integrations for client projects.",
+    achievements: [
+      "Developed cross-platform mobile applications using React Native with responsive UI and optimized performance",
+      "Designed and implemented complete UI/UX independently for client applications",
+      "Built and integrated backend APIs to support application functionality",
+      "Implemented state management and efficient data synchronization between mobile apps and backend services",
+    ],
+    isRecent: false,
+  },
+  {
+    id: 2,
     company: "Naman Digital Pvt. Ltd.",
     position: "Cloud & DevOps Intern",
     duration: "Sep 2025 – Oct 2025",
@@ -13,7 +29,7 @@ const workExperience = [
     isRecent: true,
   },
   {
-    id: 2,
+    id: 3,
     company: "SaiKet Systems",
     position: "Web Development Intern",
     duration: "Aug 2025 – Sep 2025",
@@ -28,7 +44,7 @@ const workExperience = [
     isRecent: true,
   },
   {
-    id: 3,
+    id: 4,
     company: "Naman Digital Pvt. Ltd.",
     position: "Web Development Intern",
     duration: "Jul 2025 – Sep 2025",
@@ -43,7 +59,7 @@ const workExperience = [
     isRecent: true,
   },
   {
-    id: 4,
+    id: 5,
     company: "FIL Industries Pvt. Ltd.",
     position: "Business Analytics Intern",
     duration: "May 2023 – Jul 2023",
@@ -165,7 +181,7 @@ const WorkExperienceSection = () => {
                                   {achievement}
                                 </span>
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
                       </>
