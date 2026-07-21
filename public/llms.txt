@@ -1,0 +1,31 @@
+# Sahal Imran
+
+> DevOps Engineer at CloudKeeper specializing in cloud cost optimization and FinOps on Microsoft Azure and AWS. Architected a multi-service Azure FinOps platform and a change-detection engine that delivered a verified 12% reduction in enterprise cloud spend.
+
+## About
+
+- Name: Sahal Imran
+- Role: DevOps Engineer (Cloud & FinOps)
+- Employer: CloudKeeper
+- Location: Noida, India
+- Focus: Cloud cost optimization, FinOps automation, Kubernetes (AKS), CI/CD
+- Core skills: Microsoft Azure, AWS, Kubernetes (AKS), Docker, Terraform, GitHub Actions, RabbitMQ, Python, Go, Node.js, React, React Native
+- Notable result: Delivered and verified a 12% reduction in an enterprise client's monthly cloud spend
+
+## Projects
+
+- [E-commerce Platform](https://github.com/MrSahalImran/ecom-shop): Full-featured e-commerce platform with user authentication and payment processing (React, Node.js, Stripe)
+- [LeetLab](https://github.com/MrSahalImran/leetLab): Competitive programming platform with async patterns, microservices, and Judge0 code execution (Node.js, React)
+- [Spring Boot BankApp](https://github.com/MrSahalImran/Springboot-BankApp): Secure banking app with DevSecOps practices — Docker, CVE scanning, multi-stage builds
+- [Blogify API](https://github.com/MrSahalImran/blogify): Modular backend with JWT auth and role-based access control (Node.js, Express, MongoDB)
+
+## Links
+
+- [Portfolio](https://portfolio-sahal-imran.vercel.app/): Personal portfolio and project showcase
+- [Resume (PDF)](https://portfolio-sahal-imran.vercel.app/Sahal_imran_resume.pdf): Full DevOps Engineer resume
+- [GitHub](https://github.com/MrSahalImran): Source code and open-source projects
+- [LinkedIn](https://linkedin.com/in/sahalimran): Professional profile
+
+## Contact
+
+- [Email](mailto:sahalimran.pro@gmail.com): sahalimran.pro@gmail.com

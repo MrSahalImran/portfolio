@@ -5,7 +5,111 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Sahal Imran</title>
+
+  <!-- Apply saved theme before paint to avoid a light/dark flash on the prerendered HTML -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("theme") === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Primary meta -->
+  <title>Sahal Imran — DevOps Engineer | Cloud &amp; FinOps</title>
+  <meta name="description"
+    content="Sahal Imran is a DevOps Engineer at CloudKeeper specializing in cloud cost optimization and FinOps on Azure and AWS. Architected a platform that delivered a verified 12% reduction in enterprise cloud spend. Skilled in Kubernetes (AKS), Docker, CI/CD, Python, and Go." />
+  <meta name="author" content="Sahal Imran" />
+  <meta name="keywords"
+    content="Sahal Imran, DevOps Engineer, FinOps, Cloud Cost Optimization, Azure, AWS, Kubernetes, AKS, Docker, CI/CD, CloudKeeper" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://portfolio-sahal-imran.vercel.app/" />
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sahal Imran — Portfolio" />
+  <meta property="og:title" content="Sahal Imran — DevOps Engineer | Cloud &amp; FinOps" />
+  <meta property="og:description"
+    content="DevOps Engineer specializing in cloud cost optimization and FinOps. Delivered a verified 12% cloud-spend reduction at CloudKeeper. Azure, AWS, Kubernetes, Docker, CI/CD." />
+  <meta property="og:url" content="https://portfolio-sahal-imran.vercel.app/" />
+  <meta property="og:image" content="https://portfolio-sahal-imran.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sahal Imran — DevOps Engineer, Cloud &amp; FinOps" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sahal Imran — DevOps Engineer | Cloud &amp; FinOps" />
+  <meta name="twitter:description"
+    content="DevOps Engineer specializing in cloud cost optimization and FinOps. Verified 12% cloud-spend reduction at CloudKeeper." />
+  <meta name="twitter:image" content="https://portfolio-sahal-imran.vercel.app/og-image.png" />
+
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://portfolio-sahal-imran.vercel.app/#person",
+    "name": "Sahal Imran",
+    "url": "https://portfolio-sahal-imran.vercel.app/",
+    "jobTitle": "DevOps Engineer",
+    "description": "DevOps Engineer specializing in cloud cost optimization and FinOps at CloudKeeper, focused on Azure and AWS cloud architecture, Kubernetes-based container orchestration, and cost-optimized CI/CD delivery.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CloudKeeper",
+      "url": "https://www.cloudkeeper.com"
+    },
+    "knowsAbout": [
+      "Microsoft Azure",
+      "Amazon Web Services (AWS)",
+      "Kubernetes",
+      "Azure Kubernetes Service (AKS)",
+      "Docker",
+      "CI/CD",
+      "FinOps",
+      "Cloud Cost Optimization",
+      "Python",
+      "Go",
+      "React"
+    ],
+    "sameAs": [
+      "https://github.com/MrSahalImran",
+      "https://linkedin.com/in/sahalimran",
+      "https://portfolio-sahal-imran.vercel.app/"
+    ]
+  }
+  </script>
+
+  <!-- Structured data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://portfolio-sahal-imran.vercel.app/#website",
+    "url": "https://portfolio-sahal-imran.vercel.app/",
+    "name": "Sahal Imran — Portfolio",
+    "description": "Personal portfolio of Sahal Imran, DevOps Engineer specializing in Cloud & FinOps.",
+    "author": { "@id": "https://portfolio-sahal-imran.vercel.app/#person" },
+    "inLanguage": "en"
+  }
+  </script>
+
+  <!-- Structured data: ProfilePage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://portfolio-sahal-imran.vercel.app/#profilepage",
+    "url": "https://portfolio-sahal-imran.vercel.app/",
+    "mainEntity": { "@id": "https://portfolio-sahal-imran.vercel.app/#person" },
+    "dateCreated": "2026-01-15",
+    "dateModified": "2026-07-22"
+  }
+  </script>
 </head>
 
 <body>
