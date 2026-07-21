@@ -90,7 +90,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">Jammu, J&K, India</p>
+                  <p className="text-muted-foreground">Noida, India</p>
                 </div>
               </div>
             </div>
@@ -101,6 +101,7 @@ const ContactSection = () => {
                   href="https://linkedin.com/in/sahalimran"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Sahal Imran on LinkedIn"
                 >
                   <Linkedin />
                 </a>
@@ -108,6 +109,7 @@ const ContactSection = () => {
                   href="https://github.com/MrSahalImran"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Sahal Imran on GitHub"
                 >
                   <Github />
                 </a>

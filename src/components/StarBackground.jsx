@@ -8,21 +8,32 @@ const StarBackground = () => {
   const [meteors, setMeteors] = useState([]);
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (reduceMotion) return; // respect users who opt out of motion
+
     generateStars();
     generateMeteors();
 
+    let resizeTimer;
     const handleResize = () => {
-      generateStars();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(generateStars, 200); // debounce
     };
 
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      clearTimeout(resizeTimer);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
+    const numberOfStars = Math.min(
+      Math.floor((window.innerWidth * window.innerHeight) / 10000),
+      150
     );
 
     const newStars = [];

@@ -1,4 +1,4 @@
-import { Briefcase, Code, Cloud, Palette } from "lucide-react";
+import { Cloud, TrendingDown, Code } from "lucide-react";
 
 const AboutSection = () => {
   return (
@@ -11,18 +11,26 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">Passionate Web Developer</h3>
+            <h3 className="text-2xl font-semibold">
+              DevOps &amp; Cloud Engineer
+            </h3>
 
-            <p className="text-gray-400">
-              I specialize in creating responsive, accessible, and performant
-              web applications using modern technologies.
+            <p className="text-gray-700 dark:text-gray-300">
+              I design and automate cloud infrastructure, with a specialty in
+              FinOps — building systems that measurably reduce cloud spend. At
+              CloudKeeper I architected a multi-service Azure cost-optimization
+              platform and a change-detection engine that confirmed a 12% cut in
+              a client's monthly cloud bill. The platform flags idle and
+              oversized resources across compute, storage, networking, and
+              databases, and the detection engine verifies which fixes clients
+              actually shipped.
             </p>
 
-            <p className="text-gray-400">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+            <p className="text-gray-700 dark:text-gray-300">
+              I work across Azure and AWS with Kubernetes, Docker, and CI/CD,
+              and I keep hands-on full-stack skills (React, React Native,
+              Node.js, Go, Python) that let me build the very tools I deploy and
+              operate.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -45,27 +53,13 @@ const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
-                  <p className="text-gray-400">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
                   <Cloud className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Cloud & DevOps</h4>
-                  <p className="text-gray-400">
-                    Building scalable cloud infrastructure and implementing
-                    CI/CD pipelines with modern DevOps practices.
+                  <h4 className="font-semibold text-lg">Cloud &amp; DevOps</h4>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Automating cloud infrastructure and CI/CD across Azure and
+                    AWS, with Docker and Kubernetes (AKS).
                   </p>
                 </div>
               </div>
@@ -73,14 +67,32 @@ const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Palette className="h-6 w-6 text-primary" />
+                  <TrendingDown className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">
+                    FinOps &amp; Cost Optimization
+                  </h4>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Building platforms that analyze and cut cloud spend — a
+                    verified 12% reduction for an enterprise client.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-gray-400">
-                    Crafting intuitive user interfaces and seamless user
-                    experiences with modern design principles and tools.
+                  <h4 className="font-semibold text-lg">
+                    Full-Stack Development
+                  </h4>
+                  <p className="text-gray-700 dark:text-gray-300">
+                    Building web and mobile apps end to end with React, React
+                    Native, Node.js, Go, and Python.
                   </p>
                 </div>
               </div>

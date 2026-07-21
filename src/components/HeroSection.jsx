@@ -10,22 +10,24 @@ const HeroSection = () => {
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in">Hi, I'm </span>
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              Sahal{" "}
-            </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              Imran{" "}
-            </span>
+            <span>Hi, I'm </span>
+            <span className="text-primary">Sahal{" "}</span>
+            <span className="text-gradient ml-2">Imran{" "}</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-400 max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I create stellar web experiences that blend creativity and
-            technology. Passionate about building modern, responsive websites
-            and applications that deliver value and delight users.
+
+          <p className="text-xl md:text-2xl font-medium text-primary">
+            DevOps Engineer · Cloud &amp; FinOps
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
+            I build and automate cloud infrastructure with a focus on FinOps —
+            designing platforms that measurably cut cloud spend, including a
+            verified 12% reduction for an enterprise client. Comfortable across
+            Azure, AWS, Kubernetes, Docker, and CI/CD, with full-stack roots.
           </p>
 
           <div className="opacity-0 animate-fade-in-delay-4 pt-4">
-            <a href="#projects" className="cosmic-button">
+            <a href="#experience" className="cosmic-button">
               View My Work
             </a>
           </div>

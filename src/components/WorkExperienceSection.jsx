@@ -4,13 +4,36 @@ const workExperience = [
   {
     id: 1,
     company: "CloudKeeper",
-    position: "DevOps Trainee",
-    duration: "Jan 2026 - Present",
-    location: "Noida (On Premise)",
+    position: "DevOps Engineer",
+    duration: "Jul 2026 - Present",
+    location: "Noida, India",
     description:
-      "Engaged in cloud-native development focusing on scalability ands secure deployment.",
-    achievements: ["ongoing"],
+      "Own an Azure FinOps recommendation and change-detection platform end to end — building, deploying, and operating cloud cost-optimization tooling for enterprise clients.",
+    achievements: [
+      "Architected a multi-service Azure FinOps platform orchestrating 16 cost-optimization engines into one combined report",
+      "Built a Change Detection Engine verifying implemented recommendations, confirming a realized 12% reduction in a client's monthly cloud spend",
+      "Containerized and deployed the platform on Azure Kubernetes Service (AKS); migrated internal workloads from AWS to Azure",
+      "Set up tenant-wide monitoring and alerting and scaled detection to a multi-customer model (577 tenants) with per-tenant SP auth",
+    ],
     isRecent: true,
+    ongoing: true,
+  },
+
+  {
+    id: 7,
+    company: "CloudKeeper",
+    position: "DevOps Trainee",
+    duration: "Jan 2026 - Jul 2026",
+    location: "Noida, India",
+    description:
+      "Ran client cloud cost analysis and built incident-intelligence tooling.",
+    achievements: [
+      "Conducted Azure cost optimization analysis, identifying right-sizing and reserved-instance opportunities",
+      "Built CloudPulse, an AI-powered incident intelligence platform correlating AWS/GCP alerts with LLM-based root cause analysis",
+      "Designed a multi-tenant backend in Go (Gin) with PostgreSQL, Redis, JWT, and WebSocket streaming",
+      "Integrated pgvector similarity search and set up CI/CD with GitHub Actions and containerized deployment on AWS ECS",
+    ],
+    isRecent: false,
   },
 
   {
@@ -20,20 +43,20 @@ const workExperience = [
     duration: "Sep 2025 – Jan 2026",
     location: "Remote (Norway based company)",
     description:
-      "Worked as a developer building cross-platform mobile applications and backend integrations for client projects.",
+      "Built a full-stack restaurant food-ordering platform and redesigned client websites.",
     achievements: [
-      "Developed cross-platform mobile applications using React Native with responsive UI and optimized performance",
-      "Designed and implemented complete UI/UX independently for client applications",
-      "Built and integrated backend APIs to support application functionality",
-      "Implemented state management and efficient data synchronization between mobile apps and backend services",
+      "Built a cross-platform food-ordering app with React Native (Expo Router) and Zustand — menu, cart, orders, favorites, and profile",
+      "Implemented a complete auth flow: JWT, bcrypt, email OTP verification, and password reset",
+      "Built the Node.js/Express + MongoDB REST API with Cloudinary + Multer image uploads",
+      "Built a React admin dashboard for orders and menu management, and redesigned two production websites",
     ],
-    isRecent: true,
+    isRecent: false,
   },
   {
     id: 3,
     company: "Naman Digital Pvt. Ltd.",
     position: "Cloud & DevOps Intern",
-    duration: "Sep 2025 – Oct 2025",
+    duration: "Sep 2025 – Nov 2025",
     location: "Remote",
     description:
       "Worked on cloud-native projects focusing on scalability, containerization, and secure deployments.",
@@ -41,21 +64,6 @@ const workExperience = [
       "Engineered a distributed personal cloud storage system using modern cloud architecture",
       "Deployed Docker containerized applications on AWS EC2 with automated CI/CD pipelines",
       "Built a cloud-based file conversion service and implemented multi-region deployment with load balancing",
-    ],
-    isRecent: false,
-  },
-  {
-    id: 4,
-    company: "SaiKet Systems",
-    position: "Web Development Intern",
-    duration: "Aug 2025 – Sep 2025",
-    location: "Remote",
-    description:
-      "Delivered client-focused projects during a one-month contract internship.",
-    achievements: [
-      "Designed and developed responsive, user-friendly web interfaces",
-      "Contributed to full-stack feature implementation, ensuring scalability and performance",
-      "Delivered production-ready solutions within strict timelines, collaborated effectively with team members",
     ],
     isRecent: false,
   },
@@ -82,9 +90,8 @@ const workExperience = [
     location: "On-Premise",
     description: "Focused on IT data management and process improvement.",
     achievements: [
-      "Migrated enterprise records from hardcopy to structured digital formats",
-      "Conducted data cleaning, organization, and validation for improved accuracy",
-      "Established streamlined workflows that enhanced data accessibility and team efficiency",
+      "Digitized enterprise records from hardcopy into structured formats, improving data accessibility",
+      "Performed data cleaning and validation to raise record accuracy",
     ],
     isRecent: false,
   },
@@ -98,7 +105,7 @@ const WorkExperienceSection = () => {
           Work <span className="text-primary">Experience</span>
         </h2>
 
-        <p className="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
           A journey through my professional experiences, internships, and
           contributions to various organizations.
         </p>
@@ -143,7 +150,7 @@ const WorkExperienceSection = () => {
                     </h4>
 
                     {/* Duration and location */}
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-500">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-gray-600 dark:text-gray-400">
                       <div className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
                         <span>{job.duration}</span>
@@ -156,52 +163,34 @@ const WorkExperienceSection = () => {
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-500 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     {job.description}
                   </p>
 
-                  {/* Achievements or Current Responsibilities */}
+                  {/* Live "currently working" indicator (ongoing roles) + achievements */}
                   <div className="space-y-2">
-                    {job.achievements.includes("ongoing") ? (
-                      <>
-                        <h5 className="font-medium text-sm uppercase tracking-wide text-primary">
-                          Current Responsibilities
-                        </h5>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                          <span className="font-medium text-green-600">
-                            Currently working on exciting projects...
-                          </span>
-                        </div>
-                        <div className="bg-primary/5 border border-primary/10 rounded-lg p-4 mt-3">
-                          <p className="text-sm text-muted-foreground italic">
-                            Actively contributing to cloud infrastructure and
-                            DevOps initiatives.
-                          </p>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <h5 className="font-medium text-sm uppercase tracking-wide text-primary">
-                          Key Achievements
-                        </h5>
-                        <ul className="space-y-2">
-                          {job.achievements.map(
-                            (achievement, achievementIndex) => (
-                              <li
-                                key={achievementIndex}
-                                className="flex items-start gap-2 text-sm text-muted-foreground"
-                              >
-                                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                                <span className="leading-relaxed">
-                                  {achievement}
-                                </span>
-                              </li>
-                            ),
-                          )}
-                        </ul>
-                      </>
+                    {job.ongoing && (
+                      <div className="flex items-center gap-2 text-sm mb-1">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span className="font-medium text-green-600">
+                          Currently working on exciting projects...
+                        </span>
+                      </div>
                     )}
+                    <p className="font-medium text-sm uppercase tracking-wide text-primary">
+                      Key Achievements
+                    </p>
+                    <ul className="space-y-2">
+                      {job.achievements.map((achievement, achievementIndex) => (
+                        <li
+                          key={achievementIndex}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                          <span className="leading-relaxed">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -211,7 +200,7 @@ const WorkExperienceSection = () => {
 
         {/* Call to action */}
         <div className="text-center mt-12">
-          <p className="text-gray-500 mb-6">
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
             Interested in working together or learning more about my experience?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
