@@ -6,42 +6,42 @@ const skills = [
   {
     name: "HTML/CSS",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    icon: "/icons/html5-original.svg",
     bgColor: "bg-orange-500/10",
     borderColor: "border-orange-500/20",
   },
   {
     name: "JavaScript",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon: "/icons/javascript-original.svg",
     bgColor: "bg-yellow-500/10",
     borderColor: "border-yellow-500/20",
   },
   {
     name: "React",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon: "/icons/react-original.svg",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
   },
   {
     name: "TypeScript",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    icon: "/icons/typescript-original.svg",
     bgColor: "bg-blue-600/10",
     borderColor: "border-blue-600/20",
   },
   {
     name: "Tailwind CSS",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    icon: "/icons/tailwindcss-plain.svg",
     bgColor: "bg-cyan-500/10",
     borderColor: "border-cyan-500/20",
   },
   {
     name: "Next.js",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    icon: "/icons/nextjs-original.svg",
     bgColor: "bg-gray-800/10",
     borderColor: "border-gray-500/20",
   },
@@ -50,28 +50,28 @@ const skills = [
   {
     name: "Node.js",
     category: "backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    icon: "/icons/nodejs-original.svg",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
   },
   {
     name: "Express",
     category: "backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    icon: "/icons/express-original.svg",
     bgColor: "bg-gray-700/10",
     borderColor: "border-gray-500/20",
   },
   {
     name: "MongoDB",
     category: "backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    icon: "/icons/mongodb-original.svg",
     bgColor: "bg-green-600/10",
     borderColor: "border-green-600/20",
   },
   {
     name: "PostgreSQL",
     category: "backend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    icon: "/icons/postgresql-original.svg",
     bgColor: "bg-blue-700/10",
     borderColor: "border-blue-700/20",
   },
@@ -79,48 +79,111 @@ const skills = [
   {
     name: "Git",
     category: "tools",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    icon: "/icons/git-original.svg",
     bgColor: "bg-orange-600/10",
     borderColor: "border-orange-600/20",
   },
   {
     name: "Docker",
-    category: "tools",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    category: "cloud",
+    icon: "/icons/docker-original.svg",
     bgColor: "bg-blue-400/10",
     borderColor: "border-blue-400/20",
   },
   {
     name: "VS Code",
     category: "tools",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    icon: "/icons/vscode-original.svg",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
   },
   {
     name: "Linux",
     category: "tools",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    icon: "/icons/linux-original.svg",
     bgColor: "bg-yellow-600/10",
     borderColor: "border-yellow-600/20",
   },
   {
     name: "Redux",
     category: "frontend",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    icon: "/icons/redux-original.svg",
     bgColor: "bg-purple-500/10",
     borderColor: "border-purple-500/20",
   },
   {
     name: "AWS",
-    category: "tools",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    category: "cloud",
+    icon: "/icons/amazonwebservices-original.svg",
     bgColor: "bg-orange-400/10",
     borderColor: "border-orange-400/20",
   },
+  {
+    name: "Azure",
+    category: "cloud",
+    icon: "/icons/azure-original.svg",
+    bgColor: "bg-blue-500/10",
+    borderColor: "border-blue-500/20",
+  },
+  {
+    name: "Kubernetes (AKS)",
+    category: "cloud",
+    icon: "/icons/kubernetes-plain.svg",
+    bgColor: "bg-blue-600/10",
+    borderColor: "border-blue-600/20",
+  },
+  {
+    name: "Terraform",
+    category: "cloud",
+    icon: "/icons/terraform-original.svg",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/20",
+  },
+  {
+    name: "GitHub Actions",
+    category: "cloud",
+    icon: "/icons/githubactions-original.svg",
+    bgColor: "bg-gray-600/10",
+    borderColor: "border-gray-500/20",
+  },
+  {
+    name: "Python",
+    category: "backend",
+    icon: "/icons/python-original.svg",
+    bgColor: "bg-yellow-500/10",
+    borderColor: "border-yellow-500/20",
+  },
+  {
+    name: "Go",
+    category: "backend",
+    icon: "/icons/go-original.svg",
+    bgColor: "bg-cyan-500/10",
+    borderColor: "border-cyan-500/20",
+  },
+  {
+    name: "Redis",
+    category: "backend",
+    icon: "/icons/redis-original.svg",
+    bgColor: "bg-red-500/10",
+    borderColor: "border-red-500/20",
+  },
+  {
+    name: "RabbitMQ",
+    category: "backend",
+    icon: "/icons/rabbitmq-original.svg",
+    bgColor: "bg-orange-500/10",
+    borderColor: "border-orange-500/20",
+  },
+  {
+    name: "React Native",
+    category: "frontend",
+    icon: "/icons/react-original.svg",
+    bgColor: "bg-sky-500/10",
+    borderColor: "border-sky-500/20",
+  },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "cloud", "tools"];
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -170,6 +233,8 @@ const SkillsSection = () => {
                     <img
                       src={skill.icon}
                       alt={skill.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-12 h-12 md:w-16 md:h-16 object-contain transition-transform duration-300 group-hover:scale-110"
                       onError={(e) => {
                         // Fallback if image fails to load
@@ -186,9 +251,9 @@ const SkillsSection = () => {
                   </div>
 
                   {/* Skill Name */}
-                  <h3 className="text-sm md:text-base font-medium text-center leading-tight">
+                  <p className="text-sm md:text-base font-medium text-center leading-tight">
                     {skill.name}
-                  </h3>
+                  </p>
                 </div>
 
                 {/* Hover Effect Overlay */}
