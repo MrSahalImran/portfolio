@@ -11,8 +11,8 @@ const HeroSection = () => {
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             <span>Hi, I'm </span>
-            <span className="text-primary">Sahal{" "}</span>
-            <span className="text-gradient ml-2">Imran{" "}</span>
+            <span className="text-primary">Ishita{" "}</span>
+            <span className="text-gradient ml-2">Jindal{" "}</span>
           </h1>
 
           <p className="text-xl md:text-2xl font-medium text-primary">
