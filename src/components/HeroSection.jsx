@@ -12,7 +12,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
             <span>Hi, I'm </span>
             <span className="text-primary">Ishita{" "}</span>
-            <span className="text-gradient ml-2">Jindal{" "}</span>
+            <span className="text-gradient ml-2">Jahil{" "}</span>
           </h1>
 
           <p className="text-xl md:text-2xl font-medium text-primary">
