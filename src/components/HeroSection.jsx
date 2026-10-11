@@ -16,7 +16,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-xl md:text-2xl font-medium text-primary">
-            DevOps Engineer · Cloud &amp; FinOps
+           A Stupid DevOps Engineer · Cloud &amp; FinOps
           </p>
 
           <p className="text-lg md:text-xl text-gray-800 dark:text-gray-300 max-w-2xl mx-auto">
